@@ -13,12 +13,11 @@ const NoteSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  user: {
+    type: String,
+    required: true
   }
 });
 
 module.exports = mongoose.model('Note', NoteSchema);
-
-//mongo
-//use node-notes-db
-//show collections
-//db.notes.find().pretty()

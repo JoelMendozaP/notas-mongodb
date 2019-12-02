@@ -1,0 +1,9 @@
+1. para ordenar el codigo
+ctrl + shif +p  y escribir "format document"
+
+2. Ver la base de datos por consola
+mongo
+use node-notes-db
+show collections
+db.notes.find().pretty()
+

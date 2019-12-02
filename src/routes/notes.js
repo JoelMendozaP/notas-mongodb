@@ -25,15 +25,17 @@ router.post("/notes/new-note", isAuthenticated, async (req, res) => {
     });
   } else {
     const newNote = new Note({ title, description });
-    //newNote.user = req.user.id;
+    //este linea permite enlazar la nota con usuario
+    newNote.user = req.user.id;
     await newNote.save();
     req.flash('success_msg', 'Nota agregada Satisfactoriamente');
     res.redirect("/notes");
   }
 });
-
+//aqui se muestran las notas que tenemos
 router.get("/notes", isAuthenticated, async (req, res) => {
-  const notes = await Note.find().sort({ date: "desc" });
+  //const notes = await Note.find().sort({ date: "desc" });
+  const notes = await Note.find({user: req.user.id}).sort({date: 'desc'});
   res.render("notes/all-notes", { notes });
 });
 
