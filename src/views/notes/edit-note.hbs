@@ -1,21 +1,71 @@
-<div class="col-md-4 mx-auto">
+<div class="col-md-8 mx-auto">
   <div class="card">
     <div class="card-header">
-      <h3>Edit Note</h3>
+      <h3>Editar Evento</h3>
     </div>
     <div class="card-body">
       <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST">
         <input type="hidden" name="_method" value="PUT">
-        <div class="form-group">
-          <input type="text" name="title" class="form-control" value="{{note.title}}"/>
+
+        <div class="form-row">
+
+          <div class="col-md-12">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input type="text" name="title" class="form-control" value="{{note.title}}" autofocus>
+              <label>Nombre de la feria</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input type="date" name="fecha_inicio" class="form-control" value="{{note.fecha_inicio}}" autofocus>
+              <label>Fecha de Inicio</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+          <div class="col-md-3">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input type="date" name="fecha_fin" class="form-control" value="{{note.fecha_fin}}" autofocus>
+              <label for="inputPassword4MD">Fecha de Fin</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input type="time" value="08:00" name="hora_inicio" class="form-control" value="{{note.hora_inicio}}"  autofocus>
+              <label for="inputPassword4MD">Hora Inicio</label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <!-- Material input -->
+            <div class="md-form form-group">
+              <input type="time" value="18:00" name="hora_fin" class="form-control" value="{{note.hora_fin}}" autofocus>
+              <label for="inputPassword4MD">Hora de Fin</label>
+            </div>
+          </div>
+          <!-- Grid column -->
+        </div>
+
+        <div class="col-md-12">
+          <!-- Material input -->
+          <div class="md-form form-group">
+            <input type="text" class="form-control" name="description" value="{{note.description}}">
+            <label for="inputAddress2MD">Descripcion de la feria</label>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <!-- Material input -->
+          <div class="md-form form-group">
+            <input type="text" class="form-control" name="objetivo" value="{{note.objetivo}}">
+            <label for="inputAddress2MD">Objetivo</label>
+          </div>
         </div>
         <div class="form-group">
-          <textarea name="description" class="form-control">{{note.description}}</textarea>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-block" type="submit">
-            Save
-          </button>
+          <button class="btn btn-primary btn-block" type="submit">Guardar</button>
         </div>
       </form>
     </div>

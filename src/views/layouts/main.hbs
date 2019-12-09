@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notes App</title>
+    <title>Eventos App</title>
     {{!-- MDBoostrap --}}
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -28,13 +28,14 @@
 <body>
 
     {{> navigation}}
-
-    <main class="container p-4">
+    <section class="container p-4" >
+    {{!-- <main class="container p-4 b-5"> --}}
         {{> messages}}
         {{> errors }}
         {{{ body }}}
-    </main>
-
-    <p>Footer</p>    
+    {{!-- </main> --}}
+    <div class="wave">
+            </div>
+    </section>
 </body>
 </html>

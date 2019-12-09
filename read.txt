@@ -2,8 +2,26 @@
 ctrl + shif +p  y escribir "format document"
 
 2. Ver la base de datos por consola
-mongo
-use node-notes-db
-show collections
-db.notes.find().pretty()
+> mongo
+> use node-notes-db
+> show collections
+> db.notes.find().pretty()
 
+3. Git y GitHub
+> git add .
+> git commit -m "mensaje"
+> git push
+
+4. Iniciar mongod
+> mongod
+
+5. Iniciar node
+> npm run var
+o tambien
+> node src/index.js
+
+6. Para iniciar el proyecto
+npm init --yes
+
+6. Instalacion de modulos node js
+> npm i express express-handlebars express-session method-override mongoose passport passport-local bcryptjs connect-flash

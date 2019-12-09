@@ -1,9 +1,88 @@
-body {
-    background: #fc4a1a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* https://uigradients.com/ */
+
+body{
+    margin: 0;
+    padding: 0; 
+ }
+ #map {
+    width: 100%;
+    height: 80%;
+  }
+  #coords{width: 500px;}
+ body{
+     width: 100%;
+     background-attachment: fixed;
+     background: url(../img/5.jpg);
+     background-repeat: no-repeat; 
+ }
+ section .background{
+ 	width: 100%;
+    height: 102vh;
+ }
+ section .wave
+ {
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 140px;
+ 	bottom: 0;
+ 	left: 0;
+ 	background: url(../img/wave1.png);
+ 	animation: animate 10s linear infinite;
+ }
+  section .wave:before
+  {
+  	content: '';
+  	width: 100%;
+  	height: 143px;
+ 	background: url(../img/wave1.png);
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	opacity: 0.4;
+ 	animation: animate-reverse 10s linear infinite;
+  }
+  section .wave:after
+  {
+  	content: '';
+  	width: 100%;
+  	height: 143px;
+ 	background: url(../img/wave1.png);
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	opacity: 0.6;
+ 	animation-delay: -5s;
+ 	animation: animate 20s linear infinite;
+  }
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 1360px;
+    }
+}
+@keyframes animate-reverse
+{
+    0%
+    {
+        background-position: 1360px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
+.gris{
+    background: rgba(0, 0, 0, 0.199);
+    color: #ffff;
+}
+.top-nav-collapse{
+    background: rgba(0, 0, 0, 0.733) !important;
+    color: #ffff;
 }
 .logo{
-    width:  30%;
+    width:  80%;
 }
